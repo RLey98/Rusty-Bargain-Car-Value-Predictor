@@ -34,10 +34,6 @@ Several regression models were trained, evaluated, and compared to determine whi
 - Detection of skewness and log transformation for better feature scaling.
 - Visualization of variable importance through **correlation heatmaps** and **pairplots**.
 
-<p align="center">
-  <img src="images/price_distribution.png" alt="Price Distribution" width="500"/>
-</p>
-
 ### 3. **Modeling**
 
 The following **regression models** were implemented and compared:
@@ -48,14 +44,13 @@ The following **regression models** were implemented and compared:
 - **CatBoost Regressor**
 - **LightGBM Regressor**
 
-All models were evaluated using cross-validation and fine-tuned through **GridSearchCV** and **Bayesian Optimization** (where applicable).
+All models were evaluated using cross-validation and fine-tuned through **GridSearchCV**.
 
 ### 4. **Model Evaluation**
 
 The models were compared using the following metrics:
 
 - **R² (Coefficient of Determination)**
-- **Adjusted R²**
 - **RMSE (Root Mean Squared Error)**
 - **MAE (Mean Absolute Error)**
 
@@ -79,18 +74,20 @@ Feature importance analysis using LightGBM revealed that:
 - **Year of manufacture**, **engine power**, and **mileage** were the most influential predictors.
 - Categorical features such as **brand** and **fuel type** also contributed significantly.
 
-<p align="center">
-  <img src="images/feature_importance.png" alt="Feature Importance" width="500"/>
-</p>
-
 ---
 
-## 🧩 Technologies Used
+## 🧩 Tech Stack
 
-- **Programming Language:** Python
-- **Libraries:** Pandas, NumPy, Scikit-learn, LightGBM, XGBoost, CatBoost, Matplotlib, Seaborn
-- **Development Tools:** Jupyter Notebook, Visual Studio Code
-- **Version Control:** Git & GitHub
+| Category                | Tools                                                            |
+| :---------------------- | :--------------------------------------------------------------- |
+| **Language**            | Python 3.10                                                      |
+| **Data Processing**     | Pandas, NumPy                                                    |
+| **Visualization**       | Matplotlib, Seaborn                                              |
+| **Modeling**            | Scikit-learn, LightGBM, XGBoost, CatBoost, RandomForestRegressor |
+| **Feature Engineering** | LabelEncoder, OneHotEncoder, StandardScaler                      |
+| **Optimization**        | GridSearchCV                                                     |
+| **Evaluation**          | R², RMSE, MAE                                                    |
+| **Development Tools**   | Jupyter Notebook, VS Code, Git & GitHub                          |
 
 ---
 
@@ -99,13 +96,5 @@ Feature importance analysis using LightGBM revealed that:
 - Ensemble tree-based models (LightGBM, XGBoost, CatBoost) significantly outperformed linear regression.
 - Price prediction accuracy improves notably with proper feature encoding and hyperparameter tuning.
 - The model demonstrates robustness against overfitting while maintaining interpretability.
-
----
-
-## 🚀 Future Work
-
-- Incorporate **external data** such as market demand, regional pricing, or seasonal variations.
-- Deploy the model via a **Flask/FastAPI web app** for real-time predictions.
-- Experiment with **neural networks** (e.g., TabNet, MLP) for comparison with gradient boosting methods.
 
 ---
